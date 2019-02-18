@@ -1,0 +1,360 @@
+body {
+  background: #f7f7f7;
+  -webkit-background: #f7f7f7;
+  -moz-background: #f7f7f7;
+  -ms-background: #f7f7f7;
+  -o-background: #f7f7f7;
+}
+/*发现酷玩 头部*/
+#find {
+  width: 100%;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+}
+#find h2 {
+  height: 98px;
+  line-height: 98px;
+  text-align: center;
+  font-size: 39px;
+  padding-top: 19px;
+}
+#find ul li {
+  width: 165px;
+  text-align: center;
+  left: 50%;
+  font-size: 18px;
+  transform: translateX(-150%);
+  -moz-transform: translateX(-150%);
+  -ms-transform: translateX(-150%);
+  -webkit-transform: translateX(-150%);
+  -o-transform: translateX(-150%);
+}
+#find ul li a {
+  color: #9e989c;
+}
+#find ul li.active a {
+  border: none;
+  border-bottom: 4px solid #6c00bd;
+  color: #6c00bd;
+}
+.tab-content .container {
+  padding: 25px 70px 0;
+}
+.tab-content .container .row > div {
+  padding-bottom: 20px;
+}
+.tab-content .container .row > div .report-cont {
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.tab-content .container .row > div .report-cont hgroup {
+  padding: 7px 11px 18px 6px;
+}
+.tab-content .container .row > div .report-cont hgroup h4 {
+  line-height: 22px;
+  padding: 7px 11px 20px 0;
+}
+.tab-content .container .row > div .report-cont hgroup h4 a {
+  font-size: 13px;
+  color: #414358;
+}
+.tab-content .container .row > div .report-cont hgroup h4 a:hover {
+  color: #ffa200;
+}
+.tab-content .container .row > div .report-cont hgroup h6 {
+  height: 22px;
+  line-height: 22px;
+}
+.tab-content .container .row > div .report-cont hgroup h6 a {
+  font-size: 12px;
+  color: #b0b0b0;
+}
+.tab-content .container .row > div .report-cont hgroup h6 a:hover {
+  color: #ffa200;
+}
+.tab-content .container .row > div .report-cont p {
+  font-size: 12px;
+  color: #a0a0a0;
+  padding: 0 4px 20px 10px;
+}
+.tab-content .container .row > div .report-cont p span {
+  float: right;
+  padding-right: 7px;
+}
+.tab-content .container .row > div .report-cont p i {
+  color: #f16743;
+  font-style: normal;
+}
+.tab-content .container .row > div .report-cont img {
+  height: 134px;
+  width: 100%;
+}
+.tab-content .container .row > div .report-cont.scActive {
+  transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -webkit-transition: 0.2s;
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.tab-content .container .more {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 36px 0 54px;
+}
+.tab-content .container .more a {
+  color: #f45446;
+  font-size: 16px;
+}
+.tab-content .container .life {
+  padding-top: 19px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 35px;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.tab-content .container .life h4 {
+  height: 25px;
+  line-height: 25px;
+  font-size: 15px;
+  color: #222327;
+  border-left: 6px solid #fa5444;
+  text-indent: 24px;
+}
+.tab-content .container .life .cate-icon {
+  border-bottom: 1px dashed #eaeaea;
+  padding: 35px 110px 0 30px;
+}
+.tab-content .container .life .cate-icon div {
+  padding: 0 50px 0 0;
+}
+.tab-content .container .life .cate-icon div p a {
+  display: block;
+  font-size: 13px;
+  color: #a6a5a1;
+  text-align: center;
+  padding: 114px 0 21px;
+  background: url(../images/cat_1.png) no-repeat center top;
+  -webkit-background: url(../images/cat_1.png) no-repeat center top;
+  -moz-background: url(../images/cat_1.png) no-repeat center top;
+  -ms-background: url(../images/cat_1.png) no-repeat center top;
+  -o-background: url(../images/cat_1.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div p a:hover {
+  color: #ffa200;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(2) p a {
+  background: url(../images/cat_2.png) no-repeat center top;
+  -webkit-background: url(../images/cat_2.png) no-repeat center top;
+  -moz-background: url(../images/cat_2.png) no-repeat center top;
+  -ms-background: url(../images/cat_2.png) no-repeat center top;
+  -o-background: url(../images/cat_2.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(3) p a {
+  background: url(../images/cat_3.png) no-repeat center top;
+  -webkit-background: url(../images/cat_3.png) no-repeat center top;
+  -moz-background: url(../images/cat_3.png) no-repeat center top;
+  -ms-background: url(../images/cat_3.png) no-repeat center top;
+  -o-background: url(../images/cat_3.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(4) p a {
+  background: url(../images/cat_4.png) no-repeat center top;
+  -webkit-background: url(../images/cat_4.png) no-repeat center top;
+  -moz-background: url(../images/cat_4.png) no-repeat center top;
+  -ms-background: url(../images/cat_4.png) no-repeat center top;
+  -o-background: url(../images/cat_4.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(5) p a {
+  background: url(../images/cat_5.png) no-repeat center top;
+  -webkit-background: url(../images/cat_5.png) no-repeat center top;
+  -moz-background: url(../images/cat_5.png) no-repeat center top;
+  -ms-background: url(../images/cat_5.png) no-repeat center top;
+  -o-background: url(../images/cat_5.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(6) p a {
+  background: url(../images/cat_6.png) no-repeat center top;
+  -webkit-background: url(../images/cat_6.png) no-repeat center top;
+  -moz-background: url(../images/cat_6.png) no-repeat center top;
+  -ms-background: url(../images/cat_6.png) no-repeat center top;
+  -o-background: url(../images/cat_6.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(7) p a {
+  background: url(../images/cat_7.png) no-repeat center top;
+  -webkit-background: url(../images/cat_7.png) no-repeat center top;
+  -moz-background: url(../images/cat_7.png) no-repeat center top;
+  -ms-background: url(../images/cat_7.png) no-repeat center top;
+  -o-background: url(../images/cat_7.png) no-repeat center top;
+}
+.tab-content .container .life .cate-icon div:nth-of-type(8) p a {
+  background: url(../images/cat_8.png) no-repeat center top;
+  -webkit-background: url(../images/cat_8.png) no-repeat center top;
+  -moz-background: url(../images/cat_8.png) no-repeat center top;
+  -ms-background: url(../images/cat_8.png) no-repeat center top;
+  -o-background: url(../images/cat_8.png) no-repeat center top;
+}
+.tab-content .container .life .cate-cont {
+  padding: 7px 110px 9px 30px;
+}
+.tab-content .container .life .cate-cont div {
+  padding: 0 50px 0 0;
+}
+.tab-content .container .life .cate-cont div p {
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+}
+.tab-content .container .life .cate-cont div p a {
+  font-size: 13px;
+  color: #a6a5a1;
+}
+.tab-content .container .life .cate-cont div p a:hover {
+  color: #ffa200;
+}
+.tab-content .container .life:nth-of-type(2) .cate-icon div p a {
+  background: url(../images/cat_9.png) no-repeat center top;
+  -webkit-background: url(../images/cat_9.png) no-repeat center top;
+  -moz-background: url(../images/cat_9.png) no-repeat center top;
+  -ms-background: url(../images/cat_9.png) no-repeat center top;
+  -o-background: url(../images/cat_9.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(2) .cate-icon div:nth-of-type(2) p a {
+  background: url(../images/cat_10.png) no-repeat center top;
+  -webkit-background: url(../images/cat_10.png) no-repeat center top;
+  -moz-background: url(../images/cat_10.png) no-repeat center top;
+  -ms-background: url(../images/cat_10.png) no-repeat center top;
+  -o-background: url(../images/cat_10.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(2) .cate-icon div:nth-of-type(3) p a {
+  background: url(../images/cat_11.png) no-repeat center top;
+  -webkit-background: url(../images/cat_11.png) no-repeat center top;
+  -moz-background: url(../images/cat_11.png) no-repeat center top;
+  -ms-background: url(../images/cat_11.png) no-repeat center top;
+  -o-background: url(../images/cat_11.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(4) .cate-icon div p a {
+  background: url(../images/cat_9.png) no-repeat center top;
+  -webkit-background: url(../images/cat_9.png) no-repeat center top;
+  -moz-background: url(../images/cat_9.png) no-repeat center top;
+  -ms-background: url(../images/cat_9.png) no-repeat center top;
+  -o-background: url(../images/cat_9.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(4) .cate-icon div:nth-of-type(2) p a {
+  background: url(../images/cat_4.png) no-repeat center top;
+  -webkit-background: url(../images/cat_4.png) no-repeat center top;
+  -moz-background: url(../images/cat_4.png) no-repeat center top;
+  -ms-background: url(../images/cat_4.png) no-repeat center top;
+  -o-background: url(../images/cat_4.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(4) .cate-icon div:nth-of-type(3) p a {
+  background: url(../images/cat_5.png) no-repeat center top;
+  -webkit-background: url(../images/cat_5.png) no-repeat center top;
+  -moz-background: url(../images/cat_5.png) no-repeat center top;
+  -ms-background: url(../images/cat_5.png) no-repeat center top;
+  -o-background: url(../images/cat_5.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(4) .cate-icon div:nth-of-type(4) p a {
+  background: url(../images/cat_6.png) no-repeat center top;
+  -webkit-background: url(../images/cat_6.png) no-repeat center top;
+  -moz-background: url(../images/cat_6.png) no-repeat center top;
+  -ms-background: url(../images/cat_6.png) no-repeat center top;
+  -o-background: url(../images/cat_6.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(4) .cate-icon div:nth-of-type(5) p a {
+  background: url(../images/cat_7.png) no-repeat center top;
+  -webkit-background: url(../images/cat_7.png) no-repeat center top;
+  -moz-background: url(../images/cat_7.png) no-repeat center top;
+  -ms-background: url(../images/cat_7.png) no-repeat center top;
+  -o-background: url(../images/cat_7.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(4) .cate-icon div:nth-of-type(6) p a {
+  background: url(../images/cat_8.png) no-repeat center top;
+  -webkit-background: url(../images/cat_8.png) no-repeat center top;
+  -moz-background: url(../images/cat_8.png) no-repeat center top;
+  -ms-background: url(../images/cat_8.png) no-repeat center top;
+  -o-background: url(../images/cat_8.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(5) .cate-icon div:nth-of-type(1) p a {
+  background: url(../images/cat_11.png) no-repeat center top;
+  -webkit-background: url(../images/cat_11.png) no-repeat center top;
+  -moz-background: url(../images/cat_11.png) no-repeat center top;
+  -ms-background: url(../images/cat_11.png) no-repeat center top;
+  -o-background: url(../images/cat_11.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(5) .cate-icon div:nth-of-type(3) p a {
+  background: url(../images/cat_9.png) no-repeat center top;
+  -webkit-background: url(../images/cat_9.png) no-repeat center top;
+  -moz-background: url(../images/cat_9.png) no-repeat center top;
+  -ms-background: url(../images/cat_9.png) no-repeat center top;
+  -o-background: url(../images/cat_9.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(6) .cate-icon div p a {
+  background: url(../images/cat_10.png) no-repeat center top;
+  -webkit-background: url(../images/cat_10.png) no-repeat center top;
+  -moz-background: url(../images/cat_10.png) no-repeat center top;
+  -ms-background: url(../images/cat_10.png) no-repeat center top;
+  -o-background: url(../images/cat_10.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(6) .cate-icon div:nth-of-type(2) p a {
+  background: url(../images/cat_8.png) no-repeat center top;
+  -webkit-background: url(../images/cat_8.png) no-repeat center top;
+  -moz-background: url(../images/cat_8.png) no-repeat center top;
+  -ms-background: url(../images/cat_8.png) no-repeat center top;
+  -o-background: url(../images/cat_8.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(6) .cate-icon div:nth-of-type(3) p a {
+  background: url(../images/cat_5.png) no-repeat center top;
+  -webkit-background: url(../images/cat_5.png) no-repeat center top;
+  -moz-background: url(../images/cat_5.png) no-repeat center top;
+  -ms-background: url(../images/cat_5.png) no-repeat center top;
+  -o-background: url(../images/cat_5.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(7) .cate-icon div:nth-of-type(1) p a {
+  background: url(../images/cat_3.png) no-repeat center top;
+  -webkit-background: url(../images/cat_3.png) no-repeat center top;
+  -moz-background: url(../images/cat_3.png) no-repeat center top;
+  -ms-background: url(../images/cat_3.png) no-repeat center top;
+  -o-background: url(../images/cat_3.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(7) .cate-icon div:nth-of-type(3) p a {
+  background: url(../images/cat_9.png) no-repeat center top;
+  -webkit-background: url(../images/cat_9.png) no-repeat center top;
+  -moz-background: url(../images/cat_9.png) no-repeat center top;
+  -ms-background: url(../images/cat_9.png) no-repeat center top;
+  -o-background: url(../images/cat_9.png) no-repeat center top;
+}
+.tab-content .container .life:nth-of-type(8) .cate-icon div p a {
+  background: url(../images/cat_11.png) no-repeat center top;
+  -webkit-background: url(../images/cat_11.png) no-repeat center top;
+  -moz-background: url(../images/cat_11.png) no-repeat center top;
+  -ms-background: url(../images/cat_11.png) no-repeat center top;
+  -o-background: url(../images/cat_11.png) no-repeat center top;
+}
+/*发现酷玩 头部 end*/

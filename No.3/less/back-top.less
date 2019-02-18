@@ -1,0 +1,88 @@
+.bgc(@c:transparent){
+    background: @c;
+    -webkit-background: @c;
+    -moz-background: @c;
+    -ms-background: @c;
+    -o-background: @c;
+}
+.bdr(@r:5px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -ms-border-radius: @r;
+    -o-border-radius: @r;
+}
+/*back*/
+#back-top{
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    ul{
+        border: 1px solid #f0f0f0;
+        border-bottom: none;
+        margin-bottom: 40px;
+        .bgc(#fff);
+        li{
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #f0f0f0;
+            &:last-of-type{
+                line-height: 16px;
+                font-size: 12px;
+                padding-top: 5px;
+            }
+            &:first-child{
+                position: relative;
+                div{
+                    width: 200px;
+                    height: 40px;
+                    position: absolute;
+                    top: 0;
+                    left: -200px;
+                    display: none;
+                    border: 1px solid #f0f0f0;
+                    .bgc(#fff);
+                    p{
+                        font-size: 14px;
+                        line-height: 20px;
+                        &:last-of-type{
+                            font-size: 12px;
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                position: relative;
+                div{
+                    width: 140px;
+                    height: 159px;
+                    position: absolute;
+                    top: 0;
+                    left: -140px;
+                    display: none;
+                    .bgc(#fff);
+                }
+            }
+        }
+        li:hover{
+            .bgc(#eaeaea);
+        }
+    }
+    &>div{
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        border: 1px solid #f0f0f0;
+        .bgc(#fff);
+    }
+    &>div:hover{
+        .bgc(#eaeaea);
+    }
+}
+/*back end*/

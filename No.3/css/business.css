@@ -1,0 +1,83 @@
+.business-cont {
+  padding: 50px 70px;
+}
+.business-cont .col-xs-3 .business-help {
+  padding: 27px 18px 24px 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #f3f3f3;
+  -webkit-background: #f3f3f3;
+  -moz-background: #f3f3f3;
+  -ms-background: #f3f3f3;
+  -o-background: #f3f3f3;
+}
+.business-cont .col-xs-3 .business-help h4 {
+  text-indent: 18px;
+  line-height: 36px;
+  font-size: 20px;
+  color: #42433e;
+  font-weight: bold;
+  border-bottom: 1px solid #a3a3a3;
+}
+.business-cont .col-xs-3 .business-help dl {
+  overflow: hidden;
+  padding: 10px 0 10px 18px;
+}
+.business-cont .col-xs-3 .business-help dl dt {
+  line-height: 28px;
+}
+.business-cont .col-xs-3 .business-help dl dt a {
+  font-size: 16px;
+  color: #5e6366;
+}
+.business-cont .col-xs-3 .business-help dl dt a:hover {
+  color: #ffa200;
+}
+.business-cont .col-xs-3 .business-help dl dd {
+  line-height: 27px;
+  text-indent: 16px;
+}
+.business-cont .col-xs-3 .business-help dl dd a {
+  font-size: 14px;
+  color: #575a53;
+}
+.business-cont .col-xs-3 .business-help dl dd a:hover {
+  color: #ffa200;
+}
+.business-cont .col-xs-9 .business-team {
+  padding: 27px 32px 20px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #f3f3f3;
+  -webkit-background: #f3f3f3;
+  -moz-background: #f3f3f3;
+  -ms-background: #f3f3f3;
+  -o-background: #f3f3f3;
+}
+.business-cont .col-xs-9 .business-team h4 {
+  line-height: 36px;
+  font-size: 20px;
+  color: #433f36;
+  font-weight: bold;
+  border-bottom: 1px solid #a3a3a3;
+}
+.business-cont .col-xs-9 .business-team dl {
+  padding: 5px 0 27px;
+}
+.business-cont .col-xs-9 .business-team dl dt {
+  font-size: 16px;
+  line-height: 66px;
+  font-weight: bold;
+  color: #42433e;
+}
+.business-cont .col-xs-9 .business-team dl dd {
+  font-size: 16px;
+  line-height: 28px;
+  color: #524556;
+}

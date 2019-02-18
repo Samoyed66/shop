@@ -1,0 +1,167 @@
+#login-mark {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-background: rgba(0, 0, 0, 0.5);
+  -moz-background: rgba(0, 0, 0, 0.5);
+  -ms-background: rgba(0, 0, 0, 0.5);
+  -o-background: rgba(0, 0, 0, 0.5);
+}
+#login-mark .login-pop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 715px;
+  height: 325px;
+  padding: 24px 58px 40px 50px;
+  border-bottom: 4px solid #6c00bd;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+  transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+}
+#login-mark .login-pop > span {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+#login-mark .login-pop > div {
+  float: left;
+}
+#login-mark .login-pop > div.my-login {
+  padding-right: 55px;
+  border-right: 1px solid #ededef;
+}
+#login-mark .login-pop > div.my-login h4 {
+  height: 31px;
+  line-height: 31px;
+  font-size: 18px;
+  color: #9c9c9c;
+}
+#login-mark .login-pop > div.my-login > p {
+  height: 24px;
+  line-height: 24px;
+  padding-right: 8px;
+}
+#login-mark .login-pop > div.my-login > p a {
+  font-size: 12px;
+  color: #595959;
+}
+#login-mark .login-pop > div.my-login > p a:last-of-type {
+  float: right;
+}
+#login-mark .login-pop > div.my-login > p a:hover {
+  color: #ffa200;
+}
+#login-mark .login-pop > div.my-login #form {
+  position: relative;
+  padding: 25px 0 19px;
+}
+#login-mark .login-pop > div.my-login #form .form-group {
+  width: 340px;
+  height: 44px;
+  border: 1px solid #d9d9d9;
+  margin-bottom: 10px;
+}
+#login-mark .login-pop > div.my-login #form .form-group span {
+  line-height: 44px;
+  width: 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+#login-mark .login-pop > div.my-login #form .form-group input {
+  width: 270px;
+  height: 100%;
+  border: none;
+  text-indent: 6px;
+  vertical-align: top;
+}
+#login-mark .login-pop > div.my-login #form .form-login {
+  padding: 10px 0 0 0;
+}
+#login-mark .login-pop > div.my-login #form .form-login .form-check {
+  float: left;
+}
+#login-mark .login-pop > div.my-login #form .form-login .form-check label {
+  font-size: 12px;
+  font-weight: normal;
+  color: #595959;
+}
+#login-mark .login-pop > div.my-login #form .form-login .form-btn {
+  float: right;
+}
+#login-mark .login-pop > div.my-login #form .form-login .form-btn button {
+  width: 165px;
+  border: 1px solid #6c00bd;
+  border-radius: 17px;
+  -moz-border-radius: 17px;
+  -webkit-border-radius: 17px;
+  -ms-border-radius: 17px;
+  -o-border-radius: 17px;
+  background: #6c00bd;
+  -webkit-background: #6c00bd;
+  -moz-background: #6c00bd;
+  -ms-background: #6c00bd;
+  -o-background: #6c00bd;
+}
+#login-mark .login-pop > div.my-login #form p {
+  color: #fe4a3c;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  display: none;
+}
+#login-mark .login-pop > div.three-login {
+  padding-left: 47px;
+  text-align: right;
+}
+#login-mark .login-pop > div.three-login h4 {
+  padding-right: 18px;
+  height: 27px;
+  line-height: 27px;
+  font-size: 15px;
+  color: #9c9c9c;
+}
+#login-mark .login-pop > div.three-login img {
+  margin: 28px 0 18px;
+}
+#login-mark .login-pop > div.three-login div {
+  height: 18px;
+  line-height: 18px;
+}
+#login-mark .login-pop > div.three-login div a {
+  font-size: 13px;
+  color: #6c00bd;
+  padding-right: 12px;
+}
+#login-mark .login-pop > div.three-login div a i {
+  font-size: 18px;
+  color: #6c00bd;
+  padding: 0 8px 0 12px;
+}
+#login-mark .login-pop > div.three-login div a:first-of-type {
+  padding-right: 16px;
+  border-right: 1px solid #e0e0e2;
+}
+#login-mark .login-pop > div.three-login div a:hover {
+  color: #ffa200;
+}

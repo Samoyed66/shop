@@ -1,0 +1,163 @@
+.bgc(@c:transparent){
+    background: @c;
+    -webkit-background: @c;
+    -moz-background: @c;
+    -ms-background: @c;
+    -o-background: @c;
+}
+.bdr(@r:5px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -ms-border-radius: @r;
+    -o-border-radius: @r;
+}
+.tf(@s:translateX(-100%)){
+    transform: @s;
+    -moz-transform: @s;
+    -ms-transform: @s;
+    -webkit-transform: @s;
+    -o-transform: @s;
+}
+body{
+    .bgc(#f7f7f7);
+}
+/*发现酷玩 头部*/
+#find{
+    width: 100%;
+    .bgc(white);
+    h2{
+        height: 98px;
+        line-height: 98px;
+        text-align: center;
+        font-size: 39px;
+        padding-top: 19px;
+    }
+    ul{
+        li{
+            width: 165px;
+            text-align: center;
+            left: 50%;
+            font-size: 18px;
+            .tf;
+            a{
+                color: #9e989c;
+            }
+            &.active{
+                a{
+                    border: none;
+                    border-bottom: 4px solid #6c00bd;
+                    color: #6c00bd;
+                }
+            }
+        }
+    }
+}
+.tab-content{
+    .container{
+        padding: 25px 70px 0;
+        .row{
+            .col-xs-9{
+                .answer-wrap{
+                    padding-bottom: 13px;
+                    .answer-cont{
+                        position: relative;
+                        border: 1px solid #e6e6e6;
+                        margin-bottom: 12px;
+                        overflow: hidden;
+                        .bdr;
+                        img{
+                            width: 100%;
+                        }
+                        .pic-cont{
+                            padding: 0 23px 12px 22px;
+                            position: absolute;
+                            bottom: 0;
+                            width: 100%;
+                            box-sizing: border-box;
+                            -moz-box-sizing: border-box;
+                            -webkit-box-sizing: border-box;
+                            .bgc(rgba(255,255,255,.8));
+                            h4{
+                                line-height: 67px;
+                                a{
+                                    font-size: 16px;
+                                    color: #434c5b;
+                                }
+                                a:hover{
+                                    color: #ffa200;
+                                }
+                            }
+                            &>div{
+                                line-height: 40px;
+                                font-size: 12px;
+                                color: #a5a29d;
+                                p{
+                                    text-indent: 29px;
+                                    float: left;
+                                    .bgc(url(../images/icon.png) no-repeat left center);
+                                    span{
+                                        color: #6c00bd;
+                                    }
+                                }
+                                div{
+                                    float: right;
+                                    
+                                }
+                            }
+                        }
+                    }
+                    .answer-end{
+                        border: 1px solid #e6e6e6;
+                        line-height: 48px;
+                        .bdr;
+                        a{
+                            display: block;
+                            text-align: center;
+                            font-size: 12px;
+                            color: #9d9495;
+                        }
+                    }
+                }
+                .more{
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 36px 0 54px;
+                    a{
+                        color: #f45446;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .col-xs-3{
+                .exper{
+                    padding-bottom: 60px;
+                    h4{
+                        line-height: 25px;
+                        font-size: 17px;
+                        color: #454128;
+                        border-left: 6px solid #6c00bd;
+                        text-indent: 25px;
+                    }
+                    img{
+                        margin: 20px 0 9px;
+                    }
+                    dl{
+                        padding-top: 2px;
+                        dt{
+                            line-height: 34px;
+                            font-size: 16px;
+                            color: #324d56;
+                        }
+                        dd{
+                            line-height: 22px;
+                            font-size: 12px;
+                            color: #9c9d9f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

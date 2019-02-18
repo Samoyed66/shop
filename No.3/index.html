@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/datepicker.css"/>
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/back-top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login-mark.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<script type="text/javascript" src="lib/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/login-mark.js"></script>
+	</head>
+	<body>
+		<div id="mark-pic">
+			<div>
+				<span class="glyphicon glyphicon-remove"></span>
+				<img src="images/mark-pic.png" class="img-responsive"/>
+				<p>欢迎访问潮购，新年特惠，注册即送大礼包!!</p>
+			</div>
+		</div>
+		<!--登录弹窗-->
+		<div id="login-mark">
+			<div class="login-pop">
+				<span class="fa fa-times"></span>
+				<div class="my-login">
+					<h4>潮购账户登录</h4>
+					<form id="form">
+						<p class="info">手机号或密码不正确</p>
+						<div class="form-group">
+							<span class="fa fa-mobile"></span>
+							<input type="text" placeholder="手机号">
+							<span class="fa fa-times"></span>
+						</div>
+						<div class="form-group">
+							<span class="fa fa-unlock-alt"></span>
+							<input type="password" placeholder="密码">
+							<span class="fa fa-eye-slash"></span>
+						</div>
+						<div class="form-login clear">
+							<div class="form-check">
+								<input id="auto" type="checkbox" />
+								<label for="auto">下次自动登录</label>
+							</div>
+							<div class="form-btn">
+								<button class="btn btn-danger">登录</button>
+							</div>
+						</div>
+					</form>
+					<p>
+						<a href="login.html">注册新账号</a>
+						<a href="forgen.html">忘记密码？</a>
+					</p>
+				</div>
+				<div class="three-login">
+					<h4>社交网络账号登录</h4>
+					<img src="images/weixin.png" class="img-responsive"/>
+					<div>
+						<a href="https://api.weibo.com/oauth2/authorize?client_id=592070519&redirect_uri=http%3A%2F%2Fm.jguo.com%2Fmb%2Foauth%2Fsinacallback&response_type=code">
+							<i class="fa fa-weibo"></i>
+							微博
+						</a>
+						<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101162392&redirect_uri=http://m.jguo.com/mb/oauth/qqcallback&state=9ad808154e974715ebd5d9982f843e41&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idolist,add_idol,del_idol,get_tenpay_addr">
+							<i class="fa fa-qq"></i>
+							QQ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--登录弹窗 end-->
+		<div id="mark">申请成功</div>
+		<!--申请弹窗-->
+		<div id="try-cont">
+			<ul>
+				<li>
+					<label>姓名:</label>
+					<input type="text" placeholder="请输入姓名"/>
+					<p>当前名字不正确</p>
+				</li>
+				<li class="J-datepicker-day">
+					<label>出生年月:</label>
+					<input type="text" placeholder="请选择出生年月">
+				</li>
+				<li>
+					<label>性别:</label>
+					<input type="radio" name="sex" value="男"/>男
+					<input type="radio" name="sex" value="女"/>女
+				</li>
+				<li>
+					<label>身份证号:</label>
+					<input type="text" placeholder="请输入身份证号码"/>
+					<p>当前身份证格式不正确</p>
+				</li>
+				<li>
+					<button>确认</button>
+				</li>
+				<li class="glyphicon glyphicon-remove"></li>
+			</ul>
+		</div>
+		<!--申请弹窗 end-->
+		<!--nav-->
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-head">
+						<span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</button>
+					<a href="index.html">
+						<img class="img-responsive" src="images/logonew.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse" id="nav-head">
+					<ul class="navbar-nav nav">
+						<li class="active">
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="play.html">潮货</a>
+						</li>
+						<li>
+							<a href="shop.html">导购</a>
+						</li>
+						<li>
+							<a href="free.html">试用</a>
+						</li>
+						<li>
+							<a href="report.html">报告</a>
+						</li>
+					</ul>
+					<div class="nav-res hidden-md hidden-sm navbar-right">
+						<form action="search.html" method="get" class="nav-search">
+							<input type="search" name="keyname" placeholder="请输入关键字" />
+							<span class="glyphicon glyphicon-search"></span>
+						</form>
+						<ul id="resList"></ul>
+						<a id="login" href="javascript:;">登录</a>
+						<a href="login.html">注册</a>
+						<div class="dropdown">
+				        	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+				        		<i class="glyphicon glyphicon-user"></i>
+				        		<span>请登录 </span>
+				        		<i class="caret"></i>
+				        	</a>
+				        	<ul class="dropdown-menu">
+				        		<li>
+				        			<a href="javascript:;">退出</a>
+				        		</li>
+				        	</ul>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--nav end-->
+		<!--焦点图-->
+		<div class="time">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="time-wrap swiper-slide">
+						<img src="images/banner1.jpg" class="img-responsive"/>
+					</div>
+					<div class="time-wrap swiper-slide">
+						<img src="images/banner2.jpg" class="img-responsive"/>
+						<div class="time-cont">
+							<h4>努比亚红魔Mars电竞手机</h4>
+							<p>
+								<span>1019人申请</span>
+								<span>¥3199</span>
+								<span>8台</span>
+							</p>
+							<p>申请时间剩余：<span>13天5小时37分钟</span></p>
+							<a href="javascript:;">立即申请</a>
+						</div>
+					</div>
+					<div class="time-wrap swiper-slide">
+						<img src="images/banner3.jpg" class="img-responsive"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--焦点图 end-->
+		<!--banner-->
+		<div id="banner">
+			<div class="container">
+				<h4>热门试用</h4>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot1.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot2.jpg" class="img-responsive"/>
+								<span>体验师专享</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">Osprey小鹰户外运动专业腰包</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>查看试用名单</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot3.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">Liquid Image 338 运动摄像眼镜</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot4.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot5.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot6.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot7.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot8.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot9.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot10.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot11.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<a href="free-cont.html">
+								<img src="images/hot12.jpg" class="img-responsive"/>
+								<span>首发</span>
+							</a>
+							<div class="banner-cont">
+								<h4>
+									<a href="free-cont.html">巴慕达 The Toaster 烤面包机</a>
+								</h4>
+								<p>
+									<span>2032</span>
+									<span>20台</span>
+								</p>
+								<p>1392<span>申请</span></p>
+								<p>剩余时间2天</p>
+								<div>
+									<p>
+										<span>7.5折使用(共30台)</span>
+										<span>¥374.25</span>
+									</p>
+									<p>
+										<span>购买</span>
+										<span>¥499</span>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+		</div>
+		<!--banner end-->
+		<!--报告精选-->
+		<section class="report container">
+			<h4>报告精选<a href="report.html">查看更多<span class="glyphicon glyphicon-menu-hamburger"></span></a></h4>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">空气净化器里面学问多得惊呆你，你选对了吗？</a>
+						</h4>
+						<p>
+							● 苏苏
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">怎么骑都不会累的智能自行车：云马 C1试骑体验</a>
+						</h4>
+						<p>
+							● 好吗
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">声音不是最优秀，但它形音完美的结合，足够打动人心</a>
+						</h4>
+						<p>
+							● iAra
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">风光大片信手拈来！vivo X6Plus不只是快，还是一台拍照利器</a>
+						</h4>
+						<p>
+							● 苏苏
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg5.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">空气净化器里面学问多得惊呆你，你选对了吗？</a>
+						</h4>
+						<p>
+							● 苏苏
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg6.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">声音不是最优秀，但它形音完美的结合，足够打动人心</a>
+						</h4>
+						<p>
+							● 好吗
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg7.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">怎么骑都不会累的智能自行车：云马 C1试骑体验</a>
+						</h4>
+						<p>
+							● iAra
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="report.html">
+							<img data-original="images/bg8.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<h4>
+							<a href="report.html">空气净化器里面学问多得惊呆你，你选对了吗？</a>
+						</h4>
+						<p>
+							● 苏苏
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-thumbs-o-up">3</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--报告精选 end-->
+		<!--导购精选-->
+		<section class="report">
+			<div class="container">
+				<h4>导购精选<a href="shop.html">查看更多<span class="glyphicon glyphicon-menu-hamburger"></span></a></h4>
+				<div class="row">
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">花万元把蜗居秒变“豪宅”？这12件家具就能帮你办到</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">花万元把蜗居秒变“豪宅”？这12件家具就能帮你办到</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">花万元把蜗居秒变“豪宅”？这12件家具就能帮你办到</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">到底有没有完美的iPhone手机配件，答案都在这里</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">到底有没有完美的iPhone手机配件，答案都在这里</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">到底有没有完美的iPhone手机配件，答案都在这里</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">2016，这8支钢笔够你装逼一整年</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">2016，这8支钢笔够你装逼一整年</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">2016，这8支钢笔够你装逼一整年</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">他用12年找一把完美 剃须刀，给你2万字终极购买指南</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">他用12年找一把完美 剃须刀，给你2万字终极购买指南</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+						<div class="report-cont">
+							<a href="shop-cont.html">
+								<img data-original="images/g2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<h4>
+								<a href="shop-cont.html">他用12年找一把完美 剃须刀，给你2万字终极购买指南</a>
+							</h4>
+							<p>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--导购精选 end-->
+		<!--发现酷玩-->
+		<section class="report container">
+			<h4>发现酷玩<a href="play.html">查看更多<span class="glyphicon glyphicon-menu-hamburger"></span></a></h4>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">SCiO 微型光谱仪</a>
+							</h4>
+							<h6>
+								<a href="play.html">可以测定食物成分及营养</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 12123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">B&O BeoSound 35 音响</a>
+							</h4>
+							<h6>
+								<a href="play.html">支持所有音乐流媒体服务</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 5123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">Mozbii 触控吸色笔</a>
+							</h4>
+							<h6>
+								<a href="play.html">能吸取65000种颜色</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 暂无</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">XPLORER 2 航拍飞行器</a>
+							</h4>
+							<h6>
+								<a href="play.html">搭载自动避障系统</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 433</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">SCiO 微型光谱仪</a>
+							</h4>
+							<h6>
+								<a href="play.html">可以测定食物成分及营养</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 12123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">B&O BeoSound 35 音响</a>
+							</h4>
+							<h6>
+								<a href="play.html">支持所有音乐流媒体服务</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 5123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">Mozbii 触控吸色笔</a>
+							</h4>
+							<h6>
+								<a href="play.html">能吸取65000种颜色</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 暂无</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">XPLORER 2 航拍飞行器</a>
+							</h4>
+							<h6>
+								<a href="play.html">搭载自动避障系统</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 433</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">SCiO 微型光谱仪</a>
+							</h4>
+							<h6>
+								<a href="play.html">可以测定食物成分及营养</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 12123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">B&O BeoSound 35 音响</a>
+							</h4>
+							<h6>
+								<a href="play.html">支持所有音乐流媒体服务</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 5123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">Mozbii 触控吸色笔</a>
+							</h4>
+							<h6>
+								<a href="play.html">能吸取65000种颜色</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 暂无</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">XPLORER 2 航拍飞行器</a>
+							</h4>
+							<h6>
+								<a href="play.html">搭载自动避障系统</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 433</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">SCiO 微型光谱仪</a>
+							</h4>
+							<h6>
+								<a href="play.html">可以测定食物成分及营养</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 12123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">B&O BeoSound 35 音响</a>
+							</h4>
+							<h6>
+								<a href="play.html">支持所有音乐流媒体服务</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 5123</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">Mozbii 触控吸色笔</a>
+							</h4>
+							<h6>
+								<a href="play.html">能吸取65000种颜色</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 暂无</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html">XPLORER 2 航拍飞行器</a>
+							</h4>
+							<h6>
+								<a href="play.html">搭载自动避障系统</a>
+							</h6>
+						</hgroup>
+						<p>
+							<i>¥ 433</i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<p class="more">
+				<a href="javascript:;">∨ 点击加载更多</a>
+			</p>
+		</section>
+		<!--发现酷玩 end-->
+		<!--footer-->
+		<footer id="footer">
+			<div class="container">
+				<img src="images/code.png" class="img-responsive"/>
+				<dl>
+					<dt>
+						<img src="images/logoImg.jpg" class="img-responsive"/>
+					</dt>
+					<dd>
+						<a href="javascript:;">全球酷玩试用导购平台酷·新奇·好玩·品质</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">微信添加“chaogou”获取我们的服务。</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>免费试用</dt>
+					<dd>
+						<a href="free-try.html#process">试用流程</a>
+					</dd>
+					<dd>
+						<a href="free-try.html#success">如何提高成功率</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>友情链接</dt>
+					<dd class="clear">
+						<ul>
+							<li>
+								<a href="javascript:;">智东西</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐IT</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">泡泡网</a>
+							</li>
+							<li>
+								<a href="javascript:;">ZUK社区</a>
+							</li>
+							<li>
+								<a href="javascript:;">潮客公园</a>
+							</li>
+							<li>
+								
+							</li>
+							<li>
+								<a href="javascript:;">潮社区</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;">WEIBUSI</a>
+							</li>
+							<li>
+								<a href="javascript:;">腾讯科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">PConline</a>
+							</li>
+							<li>
+								<a href="javascript:;">3W咖啡</a>
+							</li>
+							<li>
+								<a href="javascript:;">亿觅emie</a>
+							</li>
+							<li>
+								<a href="javascript:;">易迅易启玩</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>购买攻略</dt>
+					<dd>
+						<a href="javascript:;">美亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">日亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">海淘转运攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">kickstarter 众筹购买攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">indiegogo 众筹购买攻略</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>厂商合作</dt>
+					<dd>
+						<a href="business.html#about">关于潮购</a>
+					</dd>
+					<dd>
+						<a href="business.html#call">联系我们</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">商务合作：BD@chaogou.com</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">CEO邮箱：CEO@chaogou.com</a>
+					</dd>
+				</dl>
+				<p>&copy;2016 潮购版权所有</p>
+			</div>
+		</footer>
+		<!--footer end-->
+		<!--back-->
+		<div id="back-top">
+			<ul>
+				<li>
+					<span class="fa fa-phone"></span>
+					<div>
+						<p>400-001-9217</p>
+						<p>周一到周五 10:00-19:00</p>
+					</div>
+				</li>
+				<li>
+					<span class="fa fa-weixin"></span>
+					<div>
+						<img src="images/QR.jpg" class="img-responsive"/>
+					</div>
+				</li>
+				<li>
+					意见<br />反馈
+				</li>
+			</ul>
+			<div>
+				<span class="fa fa-arrow-up"></span>
+			</div>
+		</div>
+		<!--back end-->
+		<!--百度模板-->
+		<script type="text/html" id="menuList">
+			<%for (var i = 0; i<menulist.length; i++){%>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original=<%=menulist[i].src%> src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html"><%=menulist[i].title%></a>
+							</h4>
+							<h6>
+								<a href="play.html"><%=menulist[i].smalltitle%></a>
+							</h6>
+						</hgroup>
+						<p>
+							<i><%=menulist[i].price%></i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+			<%}%>
+		</script>
+		<!--百度模板 end-->
+		<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="lib/js/baiduTemplate.js"></script>
+		<script type="text/javascript" src="lib/js/jquery.lazyload.min.js"></script>
+		<script type="text/javascript" src="lib/js/swiper.min.js"></script>
+		<script type="text/javascript" src="lib/js/datepicker.all.js"></script>
+		<script type="text/javascript" src="lib/js/moment.min.js"></script>
+		<script type="text/javascript" src="js/libs/prop-up.js"></script>
+		<script type="text/javascript" src="js/libs/search.js"></script>
+		<script type="text/javascript" src="js/libs/back-top.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,170 @@
+body {
+  background: #f8f8f8;
+  -webkit-background: #f8f8f8;
+  -moz-background: #f8f8f8;
+  -ms-background: #f8f8f8;
+  -o-background: #f8f8f8;
+}
+/*search*/
+#search {
+  width: 100%;
+  background: #eeeeee;
+  -webkit-background: #eeeeee;
+  -moz-background: #eeeeee;
+  -ms-background: #eeeeee;
+  -o-background: #eeeeee;
+}
+#search .container {
+  padding: 25px 70px;
+}
+#search .container .form-group {
+  height: 42px;
+  padding-left: 16px;
+  overflow: hidden;
+  margin: 0;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#search .container .form-group label {
+  font-size: 16px;
+  color: #ccc;
+}
+#search .container .form-group input {
+  width: 88%;
+  border: none;
+  height: 100%;
+}
+#search .container .form-group button {
+  float: right;
+  height: 100%;
+  width: 10%;
+  vertical-align: top;
+  border: none;
+  color: white;
+  font-size: 12px;
+  background: #ff4a3d;
+  -webkit-background: #ff4a3d;
+  -moz-background: #ff4a3d;
+  -ms-background: #ff4a3d;
+  -o-background: #ff4a3d;
+}
+/*search end*/
+/*search-cont*/
+#search-cont .container {
+  padding: 0 70px;
+}
+#search-cont .container .cearch-head {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #b0b0b2;
+}
+#search-cont .container .cearch-head span {
+  color: #7f7f7d;
+}
+#search-cont .container .search-list .nav {
+  margin-bottom: 14px;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#search-cont .container .search-list .nav li {
+  min-height: 50px;
+  text-align: center;
+  width: 83px;
+}
+#search-cont .container .search-list .nav li a {
+  line-height: 45px;
+  color: #807e7f;
+  padding: 0;
+}
+#search-cont .container .search-list .nav li.active a {
+  color: #000;
+  line-height: 48px;
+  border: none;
+  border-bottom: 2px solid #ff4a3d;
+  background: transparent;
+  -webkit-background: transparent;
+  -moz-background: transparent;
+  -ms-background: transparent;
+  -o-background: transparent;
+}
+#search-cont .container .search-list .tab-content .tab-pane > h4 {
+  height: 44px;
+  line-height: 44px;
+  font-size: 22px;
+  color: #000;
+  border-bottom: 1px solid #eee;
+}
+#search-cont .container .search-list .tab-content .tab-pane > h4 a {
+  font-size: 12px;
+  color: #ff4a3d;
+  float: right;
+}
+#search-cont .container .search-list .tab-content .tab-pane > h4 > span {
+  display: inline-block;
+  border-bottom: 1px solid #ff4a3d;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row {
+  margin: 20px 0 0;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div {
+  padding-bottom: 20px;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont {
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  padding: 0;
+  max-width: 235px;
+  margin: 0 auto;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont h4 {
+  line-height: 22px;
+  padding: 7px 11px 20px 6px;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont h4 a {
+  font-size: 13px;
+  color: #414358;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont h4 a:hover {
+  color: #ffa200;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont p {
+  font-size: 12px;
+  color: #a0a0a0;
+  padding: 0 4px 20px 10px;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont p span {
+  float: right;
+  padding-right: 7px;
+}
+#search-cont .container .search-list .tab-content .tab-pane .row > div .report-cont img {
+  height: 134px;
+  width: 100%;
+}
+/*search-cont end*/

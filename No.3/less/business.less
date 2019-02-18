@@ -1,0 +1,85 @@
+.bgc(@c:transparent){
+    background: @c;
+    -webkit-background: @c;
+    -moz-background: @c;
+    -ms-background: @c;
+    -o-background: @c;
+}
+.bdr(@r:5px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -ms-border-radius: @r;
+    -o-border-radius: @r;
+}
+.business-cont{
+    padding: 50px 70px;
+    .col-xs-3{
+        .business-help{
+            padding: 27px 18px 24px 20px;
+            .bdr;
+            .bgc(#f3f3f3);
+            h4{
+                text-indent: 18px;
+                line-height: 36px;
+                font-size: 20px;
+                color: #42433e;
+                font-weight: bold;
+                border-bottom: 1px solid #a3a3a3;
+            }
+            dl{
+                overflow: hidden;
+                padding: 10px 0 10px 18px;
+                dt{
+                    line-height: 28px;
+                    a{
+                        font-size: 16px;
+                        color: #5e6366;
+                    }
+                    a:hover{
+                        color: #ffa200;
+                    }
+                }
+                dd{
+                    line-height: 27px;
+                    text-indent: 16px;
+                    a{
+                        font-size: 14px;
+                        color: #575a53;
+                    }
+                    a:hover{
+                        color: #ffa200;
+                    }
+                }
+            }
+        }
+    }
+    .col-xs-9{
+        .business-team{
+            padding: 27px 32px 20px;
+            .bdr;
+            .bgc(#f3f3f3);
+            h4{
+                line-height: 36px;
+                font-size: 20px;
+                color: #433f36;
+                font-weight: bold;
+                border-bottom: 1px solid #a3a3a3;
+            }
+            dl{
+                padding: 5px 0 27px;
+                dt{
+                    font-size: 16px;
+                    line-height: 66px;
+                    font-weight: bold;
+                    color: #42433e;
+                }
+                dd{
+                    font-size: 16px;
+                    line-height: 28px;
+                    color: #524556;
+                }
+            }
+        }
+    }
+}

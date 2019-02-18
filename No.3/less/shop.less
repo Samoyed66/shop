@@ -1,0 +1,126 @@
+.bgc(@c:transparent){
+    background: @c;
+    -webkit-background: @c;
+    -moz-background: @c;
+    -ms-background: @c;
+    -o-background: @c;
+}
+.bdr(@r:5px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -ms-border-radius: @r;
+    -o-border-radius: @r;
+}
+.tf(@s:translateX(-100%)){
+    transform: @s;
+    -moz-transform: @s;
+    -ms-transform: @s;
+    -webkit-transform: @s;
+    -o-transform: @s;
+}
+body{
+    .bgc(#f7f7f7);
+}
+/*发现酷玩 头部*/
+#find{
+    width: 100%;
+    .bgc(white);
+    h2{
+        height: 98px;
+        line-height: 98px;
+        text-align: center;
+        font-size: 39px;
+        padding-top: 19px;
+    }
+    ul{
+        li{
+            width: 165px;
+            text-align: center;
+            left: 50%;
+            font-size: 18px;
+            .tf;
+            a{
+                color: #9e989c;
+            }
+            &.active{
+                a{
+                    border: none;
+                    border-bottom: 4px solid #6c00bd;
+                    color: #6c00bd;
+                }
+            }
+        }
+    }
+}
+.tab-content{
+    .container{
+        padding: 25px 70px 0;
+        .row{
+            &>div{
+                position: relative;
+                height: 229px;
+                margin-bottom: 20px;
+                .report-cont{
+                    max-width: 235px;
+                    position: absolute;
+                    overflow: hidden;
+                    border: 1px solid #eaeaea;
+                    background: white;
+                    padding: 0;
+                    .bdr(8px);
+                    h4{
+                        line-height: 22px;
+                        padding: 7px 11px 20px 6px;
+                        a{
+                            font-size: 14px;
+                            color: #414358;
+                        }
+                        a:hover{
+                            color: #ffa200;
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                        color: #a0a0a0;
+                        padding: 0 4px 20px 10px;
+                        span{
+                            float: right;
+                            padding-right: 7px;
+                        }
+                        i{
+                            color: #f16743;
+                            font-style: normal;
+                        }
+                    }
+                    img{
+                        height: 134px;
+                        width: 100%;
+                    }
+                    &:nth-of-type(1){
+                        z-index: 2;
+                    }
+                    &:nth-of-type(2){
+                        top: 10px;
+                        z-index: 1;
+                        .tf(scale(0.95));
+                    }
+                    &:nth-of-type(3){
+                        top: 20px;
+                        .tf(scale(0.9));
+                    }
+                }
+            }
+        }
+        .more{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 36px 0 54px;
+            a{
+                color: #f45446;
+                font-size: 16px;
+            }
+        }
+    }
+}

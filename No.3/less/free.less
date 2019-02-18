@@ -1,0 +1,205 @@
+.bgc(@c:transparent){
+    background: @c;
+    -webkit-background: @c;
+    -moz-background: @c;
+    -ms-background: @c;
+    -o-background: @c;
+}
+.bdr(@r:8px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -ms-border-radius: @r;
+    -o-border-radius: @r;
+}
+.tf(@s:translateX(-100%)){
+    transform: @s;
+    -moz-transform: @s;
+    -ms-transform: @s;
+    -webkit-transform: @s;
+    -o-transform: @s;
+}
+body{
+    .bgc(#f7f7f7);
+}
+/*发现酷玩 头部*/
+#find{
+    width: 100%;
+    .bgc(white);
+    h2{
+        height: 98px;
+        line-height: 98px;
+        text-align: center;
+        font-size: 39px;
+        padding-top: 19px;
+    }
+    ul{
+        li{
+            width: 165px;
+            text-align: center;
+            left: 50%;
+            font-size: 18px;
+            .tf;
+            a{
+                color: #9e989c;
+            }
+            &.active{
+                a{
+                    border: none;
+                    border-bottom: 4px solid #6c00bd;
+                    color: #6c00bd;
+                }
+            }
+        }
+    }
+}
+.tab-wrap{
+    &>.tab-pane{
+        ul{
+            background: white;
+            border-bottom: none;
+            .bgc(white);
+            li{
+                width: 165px;
+                text-align: center;
+                left: 50%;
+                font-size: 17px;
+                .tf(translateX(-200%));
+                a{
+                    color: #a5acb2;
+                }
+                &.active{
+                    a{
+                        border: none;
+                        color: #3a3a44;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            .tab-pane{
+                padding: 25px 70px 0;
+                .row{
+                    &>div{
+                        padding-bottom: 35px;
+                        .report-cont{
+                            max-width: 320px;
+                            min-height: 300px;
+                            position: relative;
+                            border: 1px solid #e8e8e8;
+                            overflow: hidden;
+                            text-align: center;
+                            margin: 0 auto;
+                            .bgc(white);
+                            .bdr;
+                            h4{
+                                line-height: 24px;
+                                padding: 8px 10px 3px;
+                                a{
+                                    font-size: 17px;
+                                    font-weight: bold;
+                                    color: #2d3a30;
+                                }
+                                a:hover{
+                                    color: #ffa200;
+                                }
+                            }
+                            p{
+                                font-size: 12px;
+                                color: #ff5b3f;
+                                &:nth-of-type(1){
+                                    padding-bottom: 8px;
+                                    span{
+                                        display: inline-block;
+                                        padding: 7px 11px;
+                                        border: 1px solid #fb5845;
+                                        margin-right: 8px;
+                                        .bdr(5px);
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                    }
+                                }
+                                &:nth-of-type(2){
+                                    line-height: 25px;
+                                    height: 25px;
+                                    span{
+                                        font-size: 15px;
+                                        color: #2d3a30;
+                                    }
+                                }
+                                &:nth-of-type(3){
+                                    line-height: 25px;
+                                    height: 25px;
+                                }
+                            }
+                            &>a{
+                                span{
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0;
+                                    font-size: 12px;
+                                    padding: 4px 11px 3px 10px;
+                                    color: white;
+                                    .bgc(#6c00bd);
+                                    .bdr(0 8px 0 8px);
+                                }
+                            }
+                        }
+                    }
+                }
+                .more{
+                    display: inline-block;
+                    width: 100%;
+                    text-align: center;
+                    padding: 36px 0 54px;
+                    a{
+                        color: #b2b2b2;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    #all{
+        .more{
+            a{
+                color: #f45446;
+            }
+        }
+    }
+    #try,#ex-try{
+        .row{
+            &>div{
+                p{
+                    &:nth-of-type(1){
+                        color: #73ca62;
+                        span{
+                            border-color: #73ca62;
+                        }
+                    }
+                    &:nth-of-type(3){
+                        color: #73ca62;
+                    }
+                }
+            }
+        }
+    }
+    #end,#ex-end{
+        .row{
+            &>div{
+                p{
+                    &:nth-of-type(1){
+                        color: #c4c9cf;
+                        span{
+                            border-color: #c4c9cf;
+                        }
+                    }
+                    &:nth-of-type(3){
+                        color: #c4c9cf;
+                    }
+                }
+            }
+        }
+    }
+}

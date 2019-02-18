@@ -1,0 +1,154 @@
+.bgc(@c:transparent){
+    background: @c;
+    -webkit-background: @c;
+    -moz-background: @c;
+    -ms-background: @c;
+    -o-background: @c;
+}
+.bdr(@r:5px){
+    border-radius: @r;
+    -moz-border-radius: @r;
+    -webkit-border-radius: @r;
+    -ms-border-radius: @r;
+    -o-border-radius: @r;
+}
+body{
+    .bgc(#f8f8f8);
+}
+/*search*/
+#search{
+    width: 100%;
+    .bgc(#eee);
+    .container{
+        padding: 25px 70px;
+        .form-group{
+            height: 42px;
+            padding-left: 16px;
+            overflow: hidden;
+            margin: 0;
+            .bgc(#fff);
+            .bdr;
+            label{
+                font-size: 16px;
+                color: #ccc;
+            }
+            input{
+                width: 88%;
+                border: none;
+                height: 100%;
+            }
+            button{
+                float: right;
+                height: 100%;
+                width: 10%;
+                vertical-align: top;
+                border: none;
+                color: white;
+                font-size: 12px;
+                .bgc(#ff4a3d);
+            }
+        }
+    }
+}
+/*search end*/
+/*search-cont*/
+#search-cont{
+    .container{
+        padding: 0 70px;
+        .cearch-head{
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #b0b0b2;
+            span{
+                color: #7f7f7d;
+            }
+        }
+        .search-list{
+            .nav{
+                margin-bottom: 14px;
+                .bgc(white);
+                .bdr;
+                li{
+                    min-height: 50px;
+                    text-align: center;
+                    width: 83px;
+                    a{
+                        line-height: 45px;
+                        color: #807e7f;
+                        padding: 0;
+                    }
+                    &.active{
+                        a{
+                            color: #000;
+                            line-height: 48px;
+                            border: none;
+                            border-bottom: 2px solid #ff4a3d;
+                            .bgc;
+                        }
+                    }
+                }
+            }
+            .tab-content{
+                .tab-pane{
+                    &>h4{
+                        height: 44px;
+                        line-height: 44px;
+                        font-size: 22px;
+                        color: #000;
+                        border-bottom: 1px solid #eee;
+                        a{
+                            font-size: 12px;
+                            color: #ff4a3d;
+                            float: right;
+                        }
+                        &>span{
+                            display: inline-block;
+                            border-bottom: 1px solid #ff4a3d;
+                        }
+                    }
+                    .row{
+                        margin: 20px 0 0;
+                        &>div{
+                            padding-bottom: 20px;
+                            .report-cont{
+                                overflow: hidden;
+                                border: 1px solid #eaeaea;
+                                padding: 0;
+                                max-width: 235px;
+                                margin: 0 auto;
+                                .bdr;
+                                .bgc(white);
+                                h4{
+                                    line-height: 22px;
+                                    padding: 7px 11px 20px 6px;
+                                    a{
+                                        font-size: 13px;
+                                        color: #414358;
+                                    }
+                                    a:hover{
+                                        color: #ffa200;
+                                    }
+                                }
+                                p{
+                                    font-size: 12px;
+                                    color: #a0a0a0;
+                                    padding: 0 4px 20px 10px;
+                                    span{
+                                        float: right;
+                                        padding-right: 7px;
+                                    }
+                                }
+                                img{
+                                    height: 134px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*search-cont end*/

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/back-top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login-mark.css"/>
+		<link rel="stylesheet" type="text/css" href="css/business.css"/>
+		<script type="text/javascript" src="lib/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/login-mark.js"></script>
+	</head>
+	<body>
+		<!--登录弹窗-->
+		<div id="login-mark">
+			<div class="login-pop">
+				<span class="fa fa-times"></span>
+				<div class="my-login">
+					<h4>极果账户登录</h4>
+					<form id="form">
+						<p class="info">手机号或密码不正确</p>
+						<div class="form-group">
+							<span class="fa fa-mobile"></span>
+							<input type="text" placeholder="手机号">
+							<span class="fa fa-times"></span>
+						</div>
+						<div class="form-group">
+							<span class="fa fa-unlock-alt"></span>
+							<input type="password" placeholder="密码">
+							<span class="fa fa-eye-slash"></span>
+						</div>
+						<div class="form-login clear">
+							<div class="form-check">
+								<input id="auto" type="checkbox" />
+								<label for="auto">下次自动登录</label>
+							</div>
+							<div class="form-btn">
+								<button class="btn btn-danger">登录</button>
+							</div>
+						</div>
+					</form>
+					<p>
+						<a href="login.html">注册新账号</a>
+						<a href="forgen.html">忘记密码？</a>
+					</p>
+				</div>
+				<div class="three-login">
+					<h4>社交网络账号登录</h4>
+					<img src="images/weixin.png" class="img-responsive"/>
+					<div>
+						<a href="https://api.weibo.com/oauth2/authorize?client_id=592070519&redirect_uri=http%3A%2F%2Fm.jguo.com%2Fmb%2Foauth%2Fsinacallback&response_type=code">
+							<i class="fa fa-weibo"></i>
+							微博
+						</a>
+						<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101162392&redirect_uri=http://m.jguo.com/mb/oauth/qqcallback&state=9ad808154e974715ebd5d9982f843e41&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idolist,add_idol,del_idol,get_tenpay_addr">
+							<i class="fa fa-qq"></i>
+							QQ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--登录弹窗 end-->
+		<!--nav-->
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-head"> 
+						<span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</button>
+					<a href="index.html">
+						<img class="img-responsive" src="images/logonew.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse" id="nav-head">
+					<ul class="navbar-nav nav">
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="play.html">酷玩</a>
+						</li>
+						<li>
+							<a href="shop.html">导购</a>
+						</li>
+						<li>
+							<a href="free.html">试用</a>
+						</li>
+						<li>
+							<a href="report.html">报告</a>
+						</li>
+					</ul>
+					<div class="nav-res hidden-md hidden-sm navbar-right">
+						<form action="search.html" method="get" class="nav-search">
+							<input type="search" name="keyname" placeholder="请输入关键字" />
+							<span class="glyphicon glyphicon-search"></span>
+						</form>
+						<ul id="resList"></ul>
+						<a id="login" href="javascript:;">登录</a>
+						<a href="login.html">注册</a>
+						<div class="dropdown">
+				        	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+				        		<i class="glyphicon glyphicon-user"></i>
+				        		<span>用户名</span> 
+				        		<i class="caret"></i>
+				        	</a>
+				        	<ul class="dropdown-menu">
+				        		<li>
+				        			<a href="javascript:;">退出</a>
+				        		</li>
+				        	</ul>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--nav end-->
+		<section class="business-cont container">
+			<div class="row">
+				<div class="col-xs-3">
+					<div class="business-help">
+						<h4>帮助中心</h4>
+						<dl>
+							<dt>
+								<a href="javascript:;">商务合作</a>
+							</dt>
+							<dd>
+								<a href="#about">关于极果</a>
+							</dd>
+							<dd>
+								<a href="#big">极果大事记</a>
+							</dd>
+							<dd>
+								<a href="#call">联系我们</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<a href="javascript:;">免费试用</a>
+							</dt>
+							<dd>
+								<a href="free-try.html#process">试用流程</a>
+							</dd>
+							<dd>
+								<a href="free-try.html#success">如何提高成功率</a>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="col-xs-9">
+					<div class="business-team">
+						<h4 id="team">商务合作</h4>
+						<dl>
+							<dt id="about">关于极果</dt>
+							<dd>全球酷玩试用导购平台。致力为玩家，消费者提供全球范围内最值得入手的新奇酷玩和品质尖儿货导购,及最有品质产品的第时间线上线下免费试用服务。通过专业人土的导购推荐及试用玩家分享的真实体验，为产品的潜在购买者提供最具价值的决策参考。</dd>
+						</dl>
+						<dl>
+							<dt id="big">极果大事记</dt>
+							<dd> 2015年12月,极果优品正式上线，定位于“只实全球口碑好物”， 给用户提供全球范围内品质产品的便捷购买通路。同月极果携众合作伙伴产品参加2015上海创博会，入驻深圳赛格国际创客产品展示推广中心和中关村智趣空间等多家线下体验店;</dd>
+							<dd>2015年11月，极果与特斯拉中国达成合作,首家推出特斯拉最新款P85D自动驾驶车的试用活动。同月,极果在2015自媒体大会中斩获“年度最佳新品众测平台”奖，成为行业公认的品质新品试用领域第一影响力品牌;</dd>
+							<dd>2015年10月,极果携众合作伙伴产品参加全国大众创业万众创新活动周活动.并与北京歌华集团联台举办了2015 Beijing Mini Maker Faire.让更多的普通消费者通过丰富的线下活动来亲身体验新硬件给生活带来的全新改变;</dd>
+							<dd>2015年9月,极果正式成立周年,极果全年合作品牌已近千家,覆盖3C、智能汽车户外等多个品质用品领域，已成为国际及国内线创新企业发布新产品时必选的首发试用平台;</dd>
+							<dd>2015年8月，极果酷玩漂流箱与2015土豆映像季、北京小饭桌年会及中国电子展等跨秀活动和行业展会深度结合.让更多追求品质生活的人群在线下体验到最前泪的酷玩产品;</dd>
+							<dd>2015年7月，极果试用全面升级为周至周五每天上线 期试用活动 .增加运动、户外等类目产品，为用户提供了更多品质新品的体验机会;</dd>
+							<dd>2015年6月，极果PC平合全面升级，为消费者提供更丰富导购内容。同时与想卡尔合作的oT酷玩大篷车正式开启为期9个月的全国巡展,将携带酷玩及科技产品走入中国名大城市，开展近百场线下体验;</dd>
+							<dd>2015年5月,极果全平台日UV峰值破百万。与亚马逊中国开启年度战略台作,并全球独家首发试用白色版Kindle及美泰费雪最新儿童餐椅等重磅品质新品;</dd>
+							<dd>2015年4月,开创产品发布当日的“新品首发"试用模式,解决用户对发布会新品的期待及体验。同期携众合作伙伴酷玩入驻富土康旗下必酷赛博北京鸟巢线下体验店;</dd>
+							<dd>2015年3月,重金收购JiGuo.com双拼域名正式更名为“极果”，井 上线全新导购产品，升级为”全球酷玩试用导购平台”;</dd>
+							<dd>2015年2月,业务持续扩大,迁入毗邻清华大学的全新办公室,位于北京海淀区清华同方科技广场;</dd>
+							<dd>2015年1月，极果vivo X5Max单明试用活动申请用户突破10,0001同期与百度百科战略合作成为百科史记年会智能区展馆独家合作伙伴;</dd>
+							<dd>2014年12月,极果承办WeMedia自媒体年会智能体验馆展区，同期核心用户突破200,000，覆盖用户近2,000,000;</dd>
+							<dd>2014年11月,极果PC平台正式上线，并独家推出线下试用产品“酷玩票流箱”。 将酷玩产品定向漂流至名类公司、孵化器进行线下体验试玩;</dd>
+							<dd>2014年10月,极果Html5平台正式上线，开始固定在每周二、周五上线免费酷玩试用活;</dd>
+							<dd>2014年9月,极果正式成立，定位于“全球酷玩试用平台”, 并开始在微信公众平台提供服务;</dd>
+						</dl>
+						<dl>
+							<dt id="call">联系我们</dt>
+						</dl>
+						<dl>
+							<dt>战略合作:</dt>
+							<dd>LaRiver</dd>
+							<dd>邮箱:laiver@jiguo.com</dd>
+							<dd>微信:lariver</dd>
+						</dl>
+						<dl>
+							<dt>商业/营销合作:</dt>
+							<dd>亿伊</dd>
+							<dd>营销合伙人</dd>
+							<dd>邮箱: yiyi@jiguo.com</dd>
+							<dd>微信:yiyi-116</dd>
+						</dl>
+						<dl>
+							<dt>商务/试用合作:</dt>
+							<dd>君子</dd>
+							<dd>邮箱:yangjunzi@jiguo.com</dd>
+							<dd>微信:yangiunzinomo</dd>
+						</dl>
+						<dl>
+							<dt>市场/品牌合作:</dt>
+							<dd>冯超</dd>
+							<dd>邮箱:kame@jiguo.com</dd>
+							<dd>微信:fc451148516</dd>
+						</dl>
+						<dl>
+							<dt>深圳分站:</dt>
+							<dd>龙戈</dd>
+							<dd>邮箱:longge@jiguo.com</dd>
+							<dd>微信:longge410258</dd>
+						</dl>
+						<dl>
+							<dt>极果优品客服/购买咨询:</dt>
+							<dd>微信:jgypvip</dd>
+							<dd>邮箱:joyp@jiguo.com</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--footer-->
+		<footer id="footer">
+			<div class="container">
+				<img src="images/code.png" class="img-responsive"/>
+				<dl>
+					<dt>
+						<img src="images/logoImg.jpg" class="img-responsive"/>
+					</dt>
+					<dd>
+						<a href="javascript:;">全球酷玩试用导购平台酷·新奇·好玩·品质</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">微信添加“JguoJguo”获取我们的服务。</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>免费试用</dt>
+					<dd>
+						<a href="free-try.html#process">试用流程</a>
+					</dd>
+					<dd>
+						<a href="free-try.html#success">如何提高成功率</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>友情链接</dt>
+					<dd class="clear">
+						<ul>
+							<li>
+								<a href="javascript:;">智东西</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐IT</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">泡泡网</a>
+							</li>
+							<li>
+								<a href="javascript:;">ZUK社区</a>
+							</li>
+							<li>
+								<a href="javascript:;">极客公园</a>
+							</li>
+							<li>
+								
+							</li>
+							<li>
+								<a href="javascript:;">果库</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;">WEIBUSI</a>
+							</li>
+							<li>
+								<a href="javascript:;">腾讯科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">PConline</a>
+							</li>
+							<li>
+								<a href="javascript:;">3W咖啡</a>
+							</li>
+							<li>
+								<a href="javascript:;">亿觅emie</a>
+							</li>
+							<li>
+								<a href="javascript:;">易迅易启玩</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>购买攻略</dt>
+					<dd>
+						<a href="javascript:;">美亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">日亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">海淘转运攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">kickstarter 众筹购买攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">indiegogo 众筹购买攻略</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>厂商合作</dt>
+					<dd>
+						<a href="business.html#about">关于极果</a>
+					</dd>
+					<dd>
+						<a href="business.html#call">联系我们</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">商务合作：BD@jiguo.com</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">CEO邮箱：CEO@jiguo.com</a>
+					</dd>
+				</dl>
+				<p>&copy;2016 极果版权所有</p>
+			</div>
+		</footer>
+		<!--footer end-->
+		<!--back-->
+		<div id="back-top">
+			<ul>
+				<li>
+					<span class="fa fa-phone"></span>
+					<div>
+						<p>400-001-9217</p>
+						<p>周一到周五 10:00-19:00</p>
+					</div>
+				</li>
+				<li>
+					<span class="fa fa-weixin"></span>
+					<div>
+						<img src="images/QR.jpg" class="img-responsive"/>
+					</div>
+				</li>
+				<li>
+					意见<br />反馈
+				</li>
+			</ul>
+			<div>
+				<span class="fa fa-arrow-up"></span>
+			</div>
+		</div>
+		<!--back end-->
+		<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/libs/back-top.js"></script>
+		<script type="text/javascript" src="js/libs/search.js"></script>
+		<script type="text/javascript" src="js/business.js"></script>
+	</body>
+</html>

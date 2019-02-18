@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login-mark.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script type="text/javascript" src="lib/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/login-mark.js"></script>
+	</head>
+	<body>
+		<!--登录弹窗-->
+		<div id="login-mark">
+			<div class="login-pop">
+				<span class="fa fa-times"></span>
+				<div class="my-login">
+					<h4>潮购账户登录</h4>
+					<form id="form">
+						<p class="info">手机号或密码不正确</p>
+						<div class="form-group">
+							<span class="fa fa-mobile"></span>
+							<input type="text" placeholder="手机号">
+							<span class="fa fa-times"></span>
+						</div>
+						<div class="form-group">
+							<span class="fa fa-unlock-alt"></span>
+							<input type="password" placeholder="密码">
+							<span class="fa fa-eye-slash"></span>
+						</div>
+						<div class="form-login clear">
+							<div class="form-check">
+								<input id="auto" type="checkbox" />
+								<label for="auto">下次自动登录</label>
+							</div>
+							<div class="form-btn">
+								<button class="btn btn-danger">登录</button>
+							</div>
+						</div>
+					</form>
+					<p>
+						<a href="login.html">注册新账号</a>
+						<a href="forgen.html">忘记密码？</a>
+					</p>
+				</div>
+				<div class="three-login">
+					<h4>社交网络账号登录</h4>
+					<img src="images/weixin.png" class="img-responsive"/>
+					<div>
+						<a href="https://api.weibo.com/oauth2/authorize?client_id=592070519&redirect_uri=http%3A%2F%2Fm.jguo.com%2Fmb%2Foauth%2Fsinacallback&response_type=code">
+							<i class="fa fa-weibo"></i>
+							微博
+						</a>
+						<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101162392&redirect_uri=http://m.jguo.com/mb/oauth/qqcallback&state=9ad808154e974715ebd5d9982f843e41&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idolist,add_idol,del_idol,get_tenpay_addr">
+							<i class="fa fa-qq"></i>
+							QQ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--登录弹窗 end-->		
+		<!--nav-->
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-head"> 
+						<span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</button>
+					<a href="index.html">
+						<img class="img-responsive" src="images/logonew.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse" id="nav-head">
+					<ul class="navbar-nav nav">
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li>
+							<a href="play.html">潮货</a>
+						</li>
+						<li>
+							<a href="shop.html">导购</a>
+						</li>
+						<li>
+							<a href="free.html">试用</a>
+						</li>
+						<li>
+							<a href="report.html">报告</a>
+						</li>
+					</ul>
+					<div class="nav-res hidden-md hidden-sm navbar-right">
+						<form action="search.html" method="get" class="nav-search">
+							<input type="search" name="keyname" placeholder="请输入关键字" />
+							<span class="glyphicon glyphicon-search"></span>
+						</form>
+						<ul id="resList"></ul>
+						<a id="login" href="javascript:;">登录</a>
+						<a href="login.html">注册</a>
+						<div class="dropdown">
+				        	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+				        		<i class="glyphicon glyphicon-user"></i>
+				        		<span>用户名 </span>
+				        		<i class="caret"></i>
+				        	</a>
+				        	<ul class="dropdown-menu">
+				        		<li>
+				        			<a href="javascript:;">退出</a>
+				        		</li>
+				        	</ul>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--nav end-->
+		<section class="login container">
+			<div class="login-cont">
+				<h4>注册潮购</h4>
+				<div class="row">
+					<form method="post" id="form-res" class="col-xs-5 col-xs-offset-3">
+						<div class="num">
+							<input type="text" placeholder="请输入登录手机号" />
+							<p>请输入手机号</p>
+						</div>
+						<div class="check clear" id="check-code">
+							<input type="text" placeholder="请输入图片校验码" />
+							<div class="code" id="data_code"></div>
+							<p>请输入图片校验码</p>
+						</div>
+						<div class="coded clear">
+							<input type="text" placeholder="请输入4位数字验证码" />
+							<span>获取验证码</span>
+							<p>请输入验证码</p>
+						</div>
+						<div class="user">
+							<input type="text" placeholder="请输入用户名" />
+							<p>请输入用户名</p>
+						</div>
+						<div class="pwd">
+							<input type="password" placeholder="请输入新密码" />
+							<p>请输入密码</p>
+						</div>
+						<div class="pwd-again">
+							<input type="password" placeholder="确定新密码" />
+							<p>请确认密码</p>
+						</div>
+						<div class="verify-wrap" id="verify-wrap2"></div>
+						<div class="btn">
+							<input type="button" value="立即注册" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!--footer-->
+		<footer id="footer">
+			<div class="container">
+				<img src="images/code.png" class="img-responsive"/>
+				<dl>
+					<dt>
+						<img src="images/logoImg.jpg" class="img-responsive"/>
+					</dt>
+					<dd>
+						<a href="javascript:;">全球酷玩试用导购平台酷·新奇·好玩·品质</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">微信添加“chaogou”获取我们的服务。</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>免费试用</dt>
+					<dd>
+						<a href="free-try.html#process">试用流程</a>
+					</dd>
+					<dd>
+						<a href="free-try.html#success">如何提高成功率</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>友情链接</dt>
+					<dd class="clear">
+						<ul>
+							<li>
+								<a href="javascript:;">智东西</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐IT</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">泡泡网</a>
+							</li>
+							<li>
+								<a href="javascript:;">ZUK社区</a>
+							</li>
+							<li>
+								<a href="javascript:;">潮客公园</a>
+							</li>
+							<li>
+								
+							</li>
+							<li>
+								<a href="javascript:;">潮社区</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;">WEIBUSI</a>
+							</li>
+							<li>
+								<a href="javascript:;">腾讯科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">PConline</a>
+							</li>
+							<li>
+								<a href="javascript:;">3W咖啡</a>
+							</li>
+							<li>
+								<a href="javascript:;">亿觅emie</a>
+							</li>
+							<li>
+								<a href="javascript:;">易迅易启玩</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>购买攻略</dt>
+					<dd>
+						<a href="javascript:;">美亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">日亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">海淘转运攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">kickstarter 众筹购买攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">indiegogo 众筹购买攻略</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>厂商合作</dt>
+					<dd>
+						<a href="business.html#about">关于潮购</a>
+					</dd>
+					<dd>
+						<a href="business.html#call">联系我们</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">商务合作：BD@chaogou.com</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">CEO邮箱：CEO@chaogou.com</a>
+					</dd>
+				</dl>
+				<p>&copy;2016 潮购版权所有</p>
+			</div>
+		</footer>
+		<!--footer end-->
+		<div id="mark">
+			<div class="success">
+				<p>恭喜您，注册成功！</p>
+				<p><span>5s</span>后自动跳转~~</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="lib/js/jq-slideVerify.js"></script>
+		<script type="text/javascript" src="js/libs/search.js"></script>
+		<script type="text/javascript" src="js/login.js"></script>
+	</body>
+</html>

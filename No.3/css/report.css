@@ -1,0 +1,157 @@
+body {
+  background: #f7f7f7;
+  -webkit-background: #f7f7f7;
+  -moz-background: #f7f7f7;
+  -ms-background: #f7f7f7;
+  -o-background: #f7f7f7;
+}
+/*发现酷玩 头部*/
+#find {
+  width: 100%;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+}
+#find h2 {
+  height: 98px;
+  line-height: 98px;
+  text-align: center;
+  font-size: 39px;
+  padding-top: 19px;
+}
+#find ul li {
+  width: 165px;
+  text-align: center;
+  left: 50%;
+  font-size: 18px;
+  transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+#find ul li a {
+  color: #9e989c;
+}
+#find ul li.active a {
+  border: none;
+  border-bottom: 4px solid #6c00bd;
+  color: #6c00bd;
+}
+.tab-content .container {
+  padding: 25px 70px 0;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap {
+  padding-bottom: 13px;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont {
+  position: relative;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 12px;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont img {
+  width: 100%;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont {
+  padding: 0 23px 12px 22px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-background: rgba(255, 255, 255, 0.8);
+  -moz-background: rgba(255, 255, 255, 0.8);
+  -ms-background: rgba(255, 255, 255, 0.8);
+  -o-background: rgba(255, 255, 255, 0.8);
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont h4 {
+  line-height: 67px;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont h4 a {
+  font-size: 16px;
+  color: #434c5b;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont h4 a:hover {
+  color: #ffa200;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont > div {
+  line-height: 40px;
+  font-size: 12px;
+  color: #a5a29d;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont > div p {
+  text-indent: 29px;
+  float: left;
+  background: url(../images/icon.png) no-repeat left center;
+  -webkit-background: url(../images/icon.png) no-repeat left center;
+  -moz-background: url(../images/icon.png) no-repeat left center;
+  -ms-background: url(../images/icon.png) no-repeat left center;
+  -o-background: url(../images/icon.png) no-repeat left center;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont > div p span {
+  color: #6c00bd;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-cont .pic-cont > div div {
+  float: right;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-end {
+  border: 1px solid #e6e6e6;
+  line-height: 48px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.tab-content .container .row .col-xs-9 .answer-wrap .answer-end a {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #9d9495;
+}
+.tab-content .container .row .col-xs-9 .more {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 36px 0 54px;
+}
+.tab-content .container .row .col-xs-9 .more a {
+  color: #f45446;
+  font-size: 16px;
+}
+.tab-content .container .row .col-xs-3 .exper {
+  padding-bottom: 60px;
+}
+.tab-content .container .row .col-xs-3 .exper h4 {
+  line-height: 25px;
+  font-size: 17px;
+  color: #454128;
+  border-left: 6px solid #6c00bd;
+  text-indent: 25px;
+}
+.tab-content .container .row .col-xs-3 .exper img {
+  margin: 20px 0 9px;
+}
+.tab-content .container .row .col-xs-3 .exper dl {
+  padding-top: 2px;
+}
+.tab-content .container .row .col-xs-3 .exper dl dt {
+  line-height: 34px;
+  font-size: 16px;
+  color: #324d56;
+}
+.tab-content .container .row .col-xs-3 .exper dl dd {
+  line-height: 22px;
+  font-size: 12px;
+  color: #9c9d9f;
+}

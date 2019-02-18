@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/rest.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login-mark.css"/>
+		<link rel="stylesheet" type="text/css" href="css/back-top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/play.css"/>
+		<script type="text/javascript" src="lib/js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/login-mark.js"></script>
+	</head>
+	<body>
+		<!--登录弹窗-->
+		<div id="login-mark">
+			<div class="login-pop">
+				<span class="fa fa-times"></span>
+				<div class="my-login">
+					<h4>潮购账户登录</h4>
+					<form id="form">
+						<p class="info">手机号或密码不正确</p>
+						<div class="form-group">
+							<span class="fa fa-mobile"></span>
+							<input type="text" placeholder="手机号">
+							<span class="fa fa-times"></span>
+						</div>
+						<div class="form-group">
+							<span class="fa fa-unlock-alt"></span>
+							<input type="password" placeholder="密码">
+							<span class="fa fa-eye-slash"></span>
+						</div>
+						<div class="form-login clear">
+							<div class="form-check">
+								<input id="auto" type="checkbox" />
+								<label for="auto">下次自动登录</label>
+							</div>
+							<div class="form-btn">
+								<button class="btn btn-danger">登录</button>
+							</div>
+						</div>
+					</form>
+					<p>
+						<a href="login.html">注册新账号</a>
+						<a href="forgen.html">忘记密码？</a>
+					</p>
+				</div>
+				<div class="three-login">
+					<h4>社交网络账号登录</h4>
+					<img src="images/weixin.png" class="img-responsive"/>
+					<div>
+						<a href="https://api.weibo.com/oauth2/authorize?client_id=592070519&redirect_uri=http%3A%2F%2Fm.jguo.com%2Fmb%2Foauth%2Fsinacallback&response_type=code">
+							<i class="fa fa-weibo"></i>
+							微博
+						</a>
+						<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&client_id=101162392&redirect_uri=http://m.jguo.com/mb/oauth/qqcallback&state=9ad808154e974715ebd5d9982f843e41&scope=get_user_info,add_share,list_album,add_album,upload_pic,add_topic,add_one_blog,add_weibo,check_page_fans,add_t,add_pic_t,del_t,get_repost_list,get_info,get_other_info,get_fanslist,get_idolist,add_idol,del_idol,get_tenpay_addr">
+							<i class="fa fa-qq"></i>
+							QQ
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--登录弹窗 end-->
+		<!--nav-->
+		<nav class="navbar navbar-static-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-head"> 
+						<span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+					</button>
+					<a href="index.html">
+						<img class="img-responsive" src="images/logonew.png"/>
+					</a>
+				</div>
+				<div class="navbar-collapse collapse" id="nav-head">
+					<ul class="navbar-nav nav">
+						<li>
+							<a href="index.html">首页</a>
+						</li>
+						<li class="active">
+							<a href="play.html">潮货</a>
+						</li>
+						<li>
+							<a href="shop.html">导购</a>
+						</li>
+						<li>
+							<a href="free.html">试用</a>
+						</li>
+						<li>
+							<a href="report.html">报告</a>
+						</li>
+					</ul>
+					<div class="nav-res hidden-md hidden-sm navbar-right">
+						<form action="search.html" method="get" class="nav-search">
+							<input type="search" name="keyname" placeholder="请输入关键字" />
+							<span class="glyphicon glyphicon-search"></span>
+						</form>
+						<ul id="resList"></ul>
+						<a id="login" href="javascript:;">登录</a>
+						<a href="login.html">注册</a>
+						<div class="dropdown">
+				        	<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+				        		<i class="glyphicon glyphicon-user"></i>
+				        		<span>用户名 </span>
+				        		<i class="caret"></i>
+				        	</a>
+				        	<ul class="dropdown-menu">
+				        		<li>
+				        			<a href="javascript:;">退出</a>
+				        		</li>
+				        	</ul>
+				        </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--nav end-->
+		<!--find-->
+		<div id="find">
+			<h2>收纳潮货</h2>
+			<ul class="nav nav-tabs">
+		        <li class="active"><a href="#new" data-toggle="tab">最新</a></li>
+		        <li><a href="#hot" data-toggle="tab">最热</a></li>
+		        <li><a href="#cate" data-toggle="tab">品类</a></li>
+		    </ul>
+		</div>
+		<div class="tab-content">
+	        <div class="tab-pane container fade in active" id="new">
+            	<div class="row">
+            		<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k1.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k2.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k3.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img data-original="images/k4.jpg" src="images/load.gif" class="img-responsive lazyload"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+            	</div>
+				<p class="more">
+					<a href="javascript:;">∨ 点击加载更多</a>
+				</p>
+	        </div>
+	        <div class="tab-pane container fade " id="hot">
+            	<div class="row">
+            		<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k4.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k3.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k1.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k2.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k3.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k4.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k1.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k2.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k3.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">Mozbii 触控吸色笔</a>
+								</h4>
+								<h6>
+									<a href="play.html">能吸取65000种颜色</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 暂无</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k4.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">XPLORER 2 航拍飞行器</a>
+								</h4>
+								<h6>
+									<a href="play.html">搭载自动避障系统</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 433</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k2.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">B&O BeoSound 35 音响</a>
+								</h4>
+								<h6>
+									<a href="play.html">支持所有音乐流媒体服务</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 5123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 col-sm-6 col-xs-12">
+						<div class="report-cont">
+							<a href="play.html">
+								<img src="images/k1.jpg" class="img-responsive"/>
+							</a>
+							<hgroup>
+								<h4>
+									<a href="play.html">SCiO 微型光谱仪</a>
+								</h4>
+								<h6>
+									<a href="play.html">可以测定食物成分及营养</a>
+								</h6>
+							</hgroup>
+							<p>
+								<i>¥ 12123</i>
+								<span class="fa fa-comment-o">3</span>
+								<span class="fa fa-heart-o">3</span>
+							</p>
+						</div>
+					</div>
+            	</div>
+				<p class="more">
+					<a href="javascript:;">∨ 点击加载更多</a>
+				</p>
+	        </div>
+	        <div class="tab-pane container fade" id="cate">
+	            <div class="life">
+	            		<h4>生活</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">空气净化器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">吸尘器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">扫地机器人(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电风扇(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">净水壶(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电饭煲(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">咖啡机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">原汁机(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电视(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">空调(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洗衣机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">净水壶(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">热水器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">咖啡机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">原汁机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">消毒/洗碗机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">豆浆机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">扫地机器人(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电风扇(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">除湿机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">干燥机(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">取暖器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">原汁机(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>个人护理</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>健康</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>智能穿戴</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>出行</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>运动户外</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>摄影</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">剃须刀(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">按摩器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	            <div class="life">
+	            		<h4>手机</h4>
+	            		<div class="cate-icon row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">电动牙刷(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            		<div class="cate-cont row">
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">冲牙器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">洁面仪(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">蒸面器(21)</a>
+	            				</p>
+	            			</div>
+	            			<div class="col-lg-2 col-md-3 col-xs-6">
+	            				<p>
+	            					<a href="play.html">加湿器(21)</a>
+	            				</p>
+	            			</div>
+	            		</div>
+	            	</div>
+	        </div>
+	   </div>
+		<!--find end-->
+		<!--footer-->
+		<footer id="footer">
+			<div class="container">
+				<img src="images/code.png" class="img-responsive"/>
+				<dl>
+					<dt>
+						<img src="images/logoImg.jpg" class="img-responsive"/>
+					</dt>
+					<dd>
+						<a href="javascript:;">全球酷玩试用导购平台酷·新奇·好玩·品质</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">微信添加“chaogou”获取我们的服务。</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>免费试用</dt>
+					<dd>
+						<a href="free-try.html#process">试用流程</a>
+					</dd>
+					<dd>
+						<a href="free-try.html#success">如何提高成功率</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>友情链接</dt>
+					<dd class="clear">
+						<ul>
+							<li>
+								<a href="javascript:;">智东西</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐IT</a>
+							</li>
+							<li>
+								<a href="javascript:;">搜狐数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰数码</a>
+							</li>
+							<li>
+								<a href="javascript:;">泡泡网</a>
+							</li>
+							<li>
+								<a href="javascript:;">ZUK社区</a>
+							</li>
+							<li>
+								<a href="javascript:;">潮客公园</a>
+							</li>
+							<li>
+								
+							</li>
+							<li>
+								<a href="javascript:;">潮社区</a>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<a href="javascript:;">WEIBUSI</a>
+							</li>
+							<li>
+								<a href="javascript:;">腾讯科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">凤凰科技</a>
+							</li>
+							<li>
+								<a href="javascript:;">PConline</a>
+							</li>
+							<li>
+								<a href="javascript:;">3W咖啡</a>
+							</li>
+							<li>
+								<a href="javascript:;">亿觅emie</a>
+							</li>
+							<li>
+								<a href="javascript:;">易迅易启玩</a>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>购买攻略</dt>
+					<dd>
+						<a href="javascript:;">美亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">日亚海淘教程</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">海淘转运攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">kickstarter 众筹购买攻略</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">indiegogo 众筹购买攻略</a>
+					</dd>
+				</dl>
+				<dl>
+					<dt>厂商合作</dt>
+					<dd>
+						<a href="business.html#about">关于潮购</a>
+					</dd>
+					<dd>
+						<a href="business.html#call">联系我们</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">商务合作：BD@chaogou.com</a>
+					</dd>
+					<dd>
+						<a href="javascript:;">CEO邮箱：CEO@chaogou.com</a>
+					</dd>
+				</dl>
+				<p>&copy;2016 潮购版权所有</p>
+			</div>
+		</footer>
+		<!--footer end-->
+		<!--back-->
+		<div id="back-top">
+			<ul>
+				<li>
+					<span class="fa fa-phone"></span>
+					<div>
+						<p>400-001-9217</p>
+						<p>周一到周五 10:00-19:00</p>
+					</div>
+				</li>
+				<li>
+					<span class="fa fa-weixin"></span>
+					<div>
+						<img src="images/QR.jpg" class="img-responsive"/>
+					</div>
+				</li>
+				<li>
+					意见<br />反馈
+				</li>
+			</ul>
+			<div>
+				<span class="fa fa-arrow-up"></span>
+			</div>
+		</div>
+		<!--back end-->
+		<!--百度模板-->
+		<script type="text/html" id="menuList">
+			<%for (var i = 0; i<menulist.length; i++){%>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="report-cont">
+						<a href="play.html">
+							<img data-original=<%=menulist[i].src%> src="images/load.gif" class="img-responsive lazyload"/>
+						</a>
+						<hgroup>
+							<h4>
+								<a href="play.html"><%=menulist[i].title%></a>
+							</h4>
+							<h6>
+								<a href="play.html"><%=menulist[i].smalltitle%></a>
+							</h6>
+						</hgroup>
+						<p>
+							<i><%=menulist[i].price%></i>
+							<span class="fa fa-comment-o">3</span>
+							<span class="fa fa-heart-o">3</span>
+						</p>
+					</div>
+				</div>
+			<%}%>
+		</script>
+		<!--百度模板 end-->
+		<script type="text/javascript" src="lib/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="lib/js/baiduTemplate.js"></script>
+		<script type="text/javascript" src="lib/js/jquery.lazyload.min.js"></script>
+		<script type="text/javascript" src="js/libs/search.js"></script>
+		<script type="text/javascript" src="js/libs/back-top.js"></script>
+		<script type="text/javascript" src="js/play.js"></script>
+	</body>
+</html>

@@ -1,0 +1,121 @@
+body {
+  background: #f7f7f7;
+  -webkit-background: #f7f7f7;
+  -moz-background: #f7f7f7;
+  -ms-background: #f7f7f7;
+  -o-background: #f7f7f7;
+}
+/*发现酷玩 头部*/
+#find {
+  width: 100%;
+  background: #ffffff;
+  -webkit-background: #ffffff;
+  -moz-background: #ffffff;
+  -ms-background: #ffffff;
+  -o-background: #ffffff;
+}
+#find h2 {
+  height: 98px;
+  line-height: 98px;
+  text-align: center;
+  font-size: 39px;
+  padding-top: 19px;
+}
+#find ul li {
+  width: 165px;
+  text-align: center;
+  left: 50%;
+  font-size: 18px;
+  transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+#find ul li a {
+  color: #9e989c;
+}
+#find ul li.active a {
+  border: none;
+  border-bottom: 4px solid #6c00bd;
+  color: #6c00bd;
+}
+.tab-content .container {
+  padding: 25px 70px 0;
+}
+.tab-content .container .row > div {
+  position: relative;
+  height: 229px;
+  margin-bottom: 20px;
+}
+.tab-content .container .row > div .report-cont {
+  max-width: 235px;
+  position: absolute;
+  overflow: hidden;
+  border: 1px solid #eaeaea;
+  background: white;
+  padding: 0;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.tab-content .container .row > div .report-cont h4 {
+  line-height: 22px;
+  padding: 7px 11px 20px 6px;
+}
+.tab-content .container .row > div .report-cont h4 a {
+  font-size: 14px;
+  color: #414358;
+}
+.tab-content .container .row > div .report-cont h4 a:hover {
+  color: #ffa200;
+}
+.tab-content .container .row > div .report-cont p {
+  font-size: 12px;
+  color: #a0a0a0;
+  padding: 0 4px 20px 10px;
+}
+.tab-content .container .row > div .report-cont p span {
+  float: right;
+  padding-right: 7px;
+}
+.tab-content .container .row > div .report-cont p i {
+  color: #f16743;
+  font-style: normal;
+}
+.tab-content .container .row > div .report-cont img {
+  height: 134px;
+  width: 100%;
+}
+.tab-content .container .row > div .report-cont:nth-of-type(1) {
+  z-index: 2;
+}
+.tab-content .container .row > div .report-cont:nth-of-type(2) {
+  top: 10px;
+  z-index: 1;
+  transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+.tab-content .container .row > div .report-cont:nth-of-type(3) {
+  top: 20px;
+  transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+.tab-content .container .more {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 36px 0 54px;
+}
+.tab-content .container .more a {
+  color: #f45446;
+  font-size: 16px;
+}
